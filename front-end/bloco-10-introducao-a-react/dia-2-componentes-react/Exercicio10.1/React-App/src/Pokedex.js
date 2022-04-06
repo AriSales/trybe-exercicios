@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Pokemon from './Pokemon'
+import './App.css';
 
 
 
@@ -9,10 +11,16 @@ class Pokedex extends Component {
         return (
             <>
                 <h1 className='center'>Pokedex</h1>
-                <Pokemon objPokemons={pokemonData} />
+                <div className="pokedex">
+                    {pokemonData.map((pokemon) => <Pokemon key={pokemon.name} objPokemons={pokemon} />)}
+                </div>
             </>
         );
     }
 }
- 
+
+Pokedex.propTypes = {
+    pokemonData: PropTypes.array.isRequired,
+};
+
 export default Pokedex;

@@ -7,23 +7,24 @@
 .pokedex {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 .pokemon {
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    padding: 1.5em;
-    margin: 5em;
+    border-radius: 0.5em;
+    padding: 1.1em;
+    margin: 1em;
     transition: 0.2s;
     background-color: #f2f2f2;
+    border-bottom: 0.5em solid #000000;
 }
 
 .pokemon:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
 }
 
